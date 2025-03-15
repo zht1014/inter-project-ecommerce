@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         // 设置 Node.js 环境
-        NODEJS_HOME = tool name: 'NodeJS 16', type: 'nodejs'
+        NODEJS_HOME = tool name: 'NodeJS 23', type: 'nodejs'
         PATH = "${NODEJS_HOME}/bin:${env.PATH}"
     }
 
