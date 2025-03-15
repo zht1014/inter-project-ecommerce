@@ -10,8 +10,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // 从 GitHub 拉取代码
-                git branch: 'main', url: 'https://github.com/your-username/your-react-repo.git'
+                // 使用 SSH URL 拉取代码
+                git branch: 'main', url: 'git@github.com:zht1014/inter-project-ecommerce.git', credentialsId: 'github-ssh-key'
             }
         }
 
