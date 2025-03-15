@@ -11,7 +11,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // 使用 SSH URL 拉取代码
-                git branch: 'main', url: 'git@github.com:zht1014/inter-project-ecommerce.git', credentialsId: 'github-ssh-key'
+                git branch: 'main', url: 'git@github.com:zht1014/inter-project-ecommerce.git', credentialsId: 'github-jenkinstest-ssh-key'
             }
         }
 
