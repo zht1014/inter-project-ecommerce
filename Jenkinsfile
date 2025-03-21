@@ -1,14 +1,13 @@
 pipeline {
-    agent {
-        docker {
-            image 'node:6-alpine' 
-            args '-p 3000:3000' 
-        }
+    agent any
+    tools { 
+        nodejs 'node18' // 使用 Jenkins 配置的 Node.js 版本
     }
     stages {
-        stage('Build') { 
+        stage('Build') {
             steps {
-                sh 'npm install' 
+                sh 'node -v'    // 确保 Node.js 版本正确
+                sh 'npm install'
             }
         }
     }
